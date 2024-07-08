@@ -151,6 +151,66 @@ h3{
     margin: 20px 0;
 }
 
+
+/* PREGUNTAS ACORDEON */
+
+.acordeon {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+}
+h2{
+    text-align: center;
+    color: #333;
+}
+
+h3{
+    font-size: 1rem;
+}
+.faq {
+    background: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.faq h3 {
+    cursor: pointer;
+    position: relative;
+    margin: 0;
+    padding: 10px;
+    background: #fa9525;
+    color: #fff;
+    border-radius: 5px;
+}
+.faq h3::after {
+    content: '+';
+    position: absolute;
+    right: 20px;
+    font-size: 20px;
+    transition: transform 0.3s;
+}
+.faq.active h3::after {
+    transform: rotate(45deg);
+}
+.faq .preg-parrafo {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.5s ;
+    padding: 0 20px;
+    border-top: 1px solid #ddd;
+}
+.faq.active .preg-parrafo {
+    max-height: 1000px; /* Ajusta esto según la cantidad de contenido */
+    padding: 20px;
+}
+
+
+
+
+
+
 @media (max-width:600px) {
 
     
@@ -237,6 +297,13 @@ h3{
         flex-direction: column;
         
     }
+
+    /* PREGUNTAS ACORDEON */
+
+    .acordeon {
+        width: 100%;
+    }
+
 
     .footerNav ul{
         flex-direction: column;

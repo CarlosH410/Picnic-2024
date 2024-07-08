@@ -1,0 +1,132 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Frecuentes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .faq {
+            background: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .faq h2 {
+            cursor: pointer;
+            position: relative;
+            margin: 0;
+            padding: 10px;
+            background: #fa9525;
+            color: #fff;
+            border-radius: 5px;
+        }
+        .faq h2::after {
+            content: '+';
+            position: absolute;
+            right: 20px;
+            font-size: 20px;
+            transition: transform 0.3s;
+        }
+        .faq.active h2::after {
+            transform: rotate(45deg);
+        }
+        .faq p {
+            max-height: 0;
+            overflow: hidden;
+            transition: 0.5s ;
+            padding: 0 20px;
+            border-top: 1px solid #ddd;
+        }
+        .faq.active p {
+            max-height: 1000px; /* Ajusta esto según la cantidad de contenido */
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Preguntas frecuentes del PICNIC</h1>
+        <div class="faq">
+            <h2>¿Cómo se realiza el pago? ¿En efectivo o transferencia?</h2>
+            <p>Solo efectivo, en la entrada del Predio, donde se brindará los precintos. 
+                El equipo de STAFF no paga.
+            </p>
+        </div>
+        <div class="faq">
+            <h2>¿A qué hora inician las inscripciones?</h2>
+            <p>Inicia a partir de las 8:00 hs, por orden de llegada.</p>
+        </div>
+        <div class="faq">
+            <h2> ¿Qué hay que llevar?</h2>
+            <p>- Una manta para sentarse
+                - Equipo de mate a preferencia
+                - Juegos de mesa
+                - Biblia y cuaderno de apuntes 
+                - Ropa cómoda
+                - Ganas de divertirte y compartir 
+                
+            </p>
+        </div>
+        <div class="faq">
+            <h2> ¿Hay que llevar comida?</h2>
+            <p>Si, se puede llevar comida hecha. NO para prepararla allá en el predio, ejemplo: NO PARRILLA.
+
+
+            </p>
+        </div>
+        <div class="faq">
+            <h2> ¿Viene una banda invitada al PicNic?</h2>
+            <p>¡Si hay una banda exclusiva para el PicNic, tenés que venir a escucharlos!
+
+            </p>
+        </div>
+        <div class="faq">
+            <h2> ¿Va haber kiosco?</h2>
+            <p>Si, va haber una variedad de cosas ricas.
+            </p>
+        </div>
+        <div class="faq">
+            <h2> ¿Va haber equipos? ¿Es por zonas? </h2>
+            <p>Si hay tres equipos y es por zonas.
+                - Zona Norte: Verde 💚 
+                - Zona Centro: Amarillo 💛 
+                - Zona Sur: Rojo ❤
+                
+            </p>
+        </div>
+        <div class="faq">
+            <h2> ¿Hay deportes?  </h2>
+            <p>Si, hay deportes no competitivos. Sin embargo, se puede desafiar a la iglesia con la que quieras jugar. Va a haber un árbitro por cancha.
+                
+            </p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqs = document.querySelectorAll('.faq h2');
+            faqs.forEach(faq => {
+                faq.addEventListener('click', function() {
+                    this.parentElement.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
